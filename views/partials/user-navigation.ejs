@@ -1,0 +1,9 @@
+<% if(!theUser) { %>
+<div class='userNavigation'>
+			<a class='one' href="/signin">Sign In</a>&nbsp;|&nbsp;<a  class='one' href="#">My Reviews</a>&nbsp;|&nbsp;<a  class='one' href="/signin">My Watch List</a>&nbsp;|&nbsp;<a  class='one' href="#">My Poles</a>
+</div>
+<% }else{ %>
+	<div class='userNavigation'>
+				<a class='one' href="/signin/signout">Sign Out</a>&nbsp;|&nbsp;<a  class='one' href="#">My Reviews</a>&nbsp;|&nbsp;<a  class='one' href="/signin">My Watch List</a>&nbsp;|&nbsp;<a  class='one' href="#">My Poles</a>
+	</div>
+<% }%>

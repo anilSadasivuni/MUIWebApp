@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<title>MPU</title>
+		<link rel="stylesheet" type="text/css" href="/stylesheets/CSS.css">
+		<meta charset="UTF-8">
+	</head>
+	<body >
+		<% include ./partials/header.ejs %>
+
+		<% include ./partials/user-navigation.ejs %>
+
+		<div class='line'>
+			<% include ./partials/site-navigation.ejs %>
+			<div class='lineELement main mainContent'>
+			<%
+				for(var i=0; i< data.categories.length; i++){ %>
+				<h1><%= data.categories[i] %></h1>
+				<%
+                    for(var j=0; j< data.items.length;j++){
+                        if(data.categories[i] === data.items[j].catalogCategory){ %>
+					<a  class='four' href="/categories/item?itemCode=<%= data.items[j].itemCode %>"><%= data.items[j].itemName %></a><br>
+					                       <% }
+                    }
+                     %>
+				<% } %>
+			</div>
+
+		</div>
+		<% include ./partials/footer.ejs %>
+	</body>
+</html>

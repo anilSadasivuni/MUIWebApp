@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<title>MPU</title>
+		<link rel="stylesheet" type="text/css" href="/stylesheets/CSS.css">
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<% include ./partials/header.ejs %>
+		<% include ./partials/user-navigation.ejs %>
+
+		<div class='line'>
+			<% include ./partials/site-navigation.ejs %>
+			<div class='lineELement main mainContent'>
+				<h2>You are at MPU!</h2>
+        <h4>Enter Username and Password to access your content</h4>
+            <form method="POST"  action="/signin?action=signin">
+                  <label>Username</label>
+                  <input type="text" name="Username" size="40" />
+                  <label>Password</label>
+                  <input type="password" name="Password" size="40" />
+
+            <button type="submit" name="login" value="login">Log In</button>
+
+            </form>
+        <% if(userError == "invalid") { %>
+        <h4 class='red'>Either username or password are incorrect. Please try again</h4>
+        <% } %>
+			</div>
+		</div>
+
+		<% include ./partials/footer.ejs %>
+
+	</body>
+</html>

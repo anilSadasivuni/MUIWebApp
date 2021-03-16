@@ -1,0 +1,276 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+	background-color: white;
+	margin: 15px;
+	overflow: auto;
+	}
+
+.red {
+  	color: red;
+  	}
+
+.returnCategories{
+	margin-right: 20px;
+    font-size: 15px;
+    color: red;
+    background-color: white;
+    padding: 5px;
+	float: right;
+}
+
+.imageStyle {
+	height: 50px;
+	width: 50px;
+	border: 1px;
+	margin: 5px;
+	vertical-align: middle;
+}
+
+.itemImage {
+	height: 200px;
+	width: 200px;
+	border: 1px;
+	margin: 5px;
+	float: left;
+	vertical-align: top;
+}
+
+.nameHolder {
+	padding-right: 3px;
+	float: right;
+	color: black;
+}
+.branding {
+	color: white;
+	font-weight: bold;
+	background-color: red;
+	margin-bottom: 3px;
+	border-style: solid;
+	border-width: 1px;
+	text-align: center;
+}
+
+.branding:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.userNavigation {
+	background-color: black;
+	color: white;
+	margin-bottom: 3px;
+	height: 40px;
+	border-style: solid;
+	border-width: 1px;
+	text-align: center;
+	padding: 10px;
+
+}
+
+a.one:link {
+  color: white;
+  text-decoration: none;
+}
+
+a.one:visited {
+  color: white;
+  text-decoration: none;
+}
+
+a.one:hover {
+  background-color: grey;
+  color: white;
+  text-decoration: none;
+}
+
+a.one:active {
+  color: white;
+  text-decoration: none;
+}
+
+a.two:link {
+  color: blue;
+  text-decoration: none;
+}
+
+a.two:visited {
+  color: blue;
+  text-decoration: none;
+}
+
+a.two:hover {
+  color: grey;
+  text-decoration: none;
+}
+
+a.two:active {
+  color: blue;
+  text-decoration: none;
+}
+
+a.three:link {
+  color: red;
+  text-decoration: none;
+}
+
+a.three:visited {
+  color: red;
+  text-decoration: none;
+}
+
+a.three:hover {
+  color: grey;
+  text-decoration: none;
+}
+
+a.three:active {
+  color: red;
+  text-decoration: none;
+}
+
+a.four{
+  font-size: 20px;
+}
+
+a.four:link {
+  color: black;
+}
+
+a.four:visited {
+  color: black;
+}
+
+a.four:hover {
+  background-color: #00C8FF;
+  color: black;
+}
+
+a.four:active {
+  color: black;
+}
+
+.lineELement {
+  float: left;
+  height: 500px;
+  overflow: auto;
+}
+
+.navigation {
+	width: 10%;
+}
+
+.navigationContent{
+	border: solid;
+    padding: 10px;
+    border-width: 1px;
+	border-color: black;
+	text-align: center;
+}
+
+.main {
+	width: 90%;
+}
+
+.mainContent
+{
+	padding-left: 50px;
+	text-align: left;
+}
+.review:before{
+  content: "";
+  display: table;
+  clear: both;
+}
+.review {
+	padding-left: 30px;
+}
+
+.itemInformtionTitle {
+	padding-left: 30px;
+	font-size: 30px;
+	text-align: left;
+}
+.catInfo{
+	font-size: 20px;
+}
+
+.line:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+table {
+	border-collapse: collapse;
+	padding: 10px;
+	margin: auto;
+	width: 100%;
+}
+tr{
+	text-align: left;
+	display: table-row;
+}
+thead{
+	background: #57BEFF;
+}
+th{
+	padding-left: 3px;
+	width:150px;
+	height:50px;
+}
+tr{
+	border-bottom: 1px solid #ddd;
+	text-align: center;
+}
+
+.columnbtn{
+	width:200px;
+	text-align: center;
+}
+table td{
+	height: 60px;
+}
+
+.watchListHeader{
+	text-align: center;
+}
+
+.predLink
+{
+	text-align: left;
+	padding-left: 3px;
+}
+
+.footer {
+	color: white;
+	background-color: black;
+	margin-top: 3px;
+	height: 60px;
+	border-style: solid;
+	border-width: 1px;
+}
+.footerLeft{
+	padding-left: 5px;
+	width: 50%;
+	float: left;
+	text-align: left;
+}
+.footerRight{
+	padding-right: 5px;
+	width: 50%;
+	float: left;
+	text-align: right;
+}
+.contact{
+    padding : 0;
+    margin : 0;
+}
+h5 {
+    padding : 0;
+    margin : 0;
+}
+}

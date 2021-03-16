@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<title>MPU</title>
+		<link rel="stylesheet" type="text/css" href="/stylesheets/CSS.css">
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<% include ./partials/header.ejs %>
+		<% include ./partials/user-navigation.ejs %>
+
+		<div class='line'>
+			<% include ./partials/site-navigation.ejs %>
+			<div class='lineELement main'>
+				<div><button class='returnCategories' type='button' onclick="location.href='/categories'">Return to Categories</button></div>
+				<p class='itemInformtionTitle'><img class='itemImage' src='<%= data.imageURL %>' alt="itemicon "><%= data.itemName %></p>
+				<p  class='itemInformtionTitle catInfo'>Category: <%= data.catalogCategory %></p>
+				<%if(data.rating === '5')
+				{%>
+				<p class='itemInformtionTitle catInfo' >Rating:&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+				<%}%>
+				<%if(data.rating === '4')
+				{%>
+					<p class='itemInformtionTitle catInfo'>Rating:&#9733; &#9733; &#9733; &#9733; </p>
+				<%}%>
+				<%if(data.rating === '3')
+				{%>
+					<p class='itemInformtionTitle catInfo'>Rating:&#9733; &#9733; &#9733;</p>
+				<%}%>
+				<%if(data.rating === '2')
+				{%>
+					<p class='itemInformtionTitle catInfo'>Rating:&#9733; &#9733;</p>
+				<%}%>
+				<%if(data.rating === '1')
+				{%>
+					<p class='itemInformtionTitle catInfo'>Rating:&#9733;</p>
+				<%}%>
+				<% if(theUser) { %>
+				<button type='button' onclick="location.href='/signin/myitems?itemCode=<%= data.itemCode %>&action=save'">Save to Watch List</button>
+				<button  type='button'  onclick="location.href='/signin/myitems?itemCode=<%= data.itemCode %>&action=updateProfile'">Rate</button>
+				<%} else { %>
+					<p>Note: Sign In to provide your feedback</p>
+				<%}%>
+				<div class='review'>
+				<h4>Star Cast:<%= data.starCast %><br><br>
+				Director:<%= data.director %><br><br>
+				What's Good:<%= data.good %><br><br>
+				What's Bad:<%= data.bad %><br><br>
+				Watch or Not:<%= data.watch %><br><br></h4>
+				</div>
+			</div>
+		</div>
+
+	<% include ./partials/footer.ejs %>
+	</body>
+</html>

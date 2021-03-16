@@ -1,0 +1,8 @@
+<div class='branding'>
+	<% if(!theUser) { %>
+	  <p class='nameHolder'>Not Signed In.</p>
+	<% }else{ %>
+		<p class='nameHolder'>Welcome&nbsp;<%= theUser.firstName %>&nbsp;<%= theUser.lastName %></p>
+	<% }%>
+	  <h1><img class='imageStyle' src="/images/webLogo.png" alt="icon ">Motion Picture Universe</h1>
+</div>

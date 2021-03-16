@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<title>MPU</title>
+		<link rel="stylesheet" type="text/css" href="/stylesheets/CSS.css">
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<% include ./partials/header.ejs %>
+
+		<% include ./partials/user-navigation.ejs %>
+
+		<div class='line'>
+			<% include ./partials/site-navigation.ejs %>
+			<div class='lineELement main'>
+				<h2>Provide your rating for: </h2>
+				<p class='itemInformtionTitle'><img class='itemImage' src="<%= item.imageURL %>" alt="itemicon "><%= item.item %></p><p  class='itemInformtionTitle catInfo'>Category: <%= item.category %></p>
+				<form id="rating-form" method="post" action="/signin/myitems?itemCode=<%= item.itemCode %>&action=updateRating">
+					<p  class='itemInformtionTitle catInfo'>Rating:
+					<select  id="rating" name="rating">
+						<option value="0" <%if(item.rating=="0"){%> selected <%}%>>0</option>
+					  <option value="1" <%if(item.rating=="1"){%> selected <%}%>>1</option>
+					  <option value="2" <%if(item.rating=="2"){%> selected <%}%>>2</option>
+					  <option value="3" <%if(item.rating=="3"){%> selected <%}%>>3</option>
+					  <option value="4" <%if(item.rating=="4"){%> selected <%}%>>4</option>
+					  <option value="5" <%if(item.rating=="5"){%> selected <%}%>>5</option>
+					</select>
+					<button type=submit name='ratingButton' >Confirm Your Rating</button>
+					</p>
+				</form>
+				<form id="watch-form" method="post" action="/signin/myitems?itemCode=<%= item.itemCode %>&action=updateFlag">
+					<p  class='itemInformtionTitle catInfo'>Watched the Movie?:
+						<select  id="flag" name="flag">
+							<option value="Yes" <%if(item.madeIt=="Yes"){%> selected <%}%>>Yes</option>
+							<option value="No" <%if(item.madeIt=="No"){%> selected <%}%>>No</option>
+						</select>
+					<button type=submit name='flagButton' >confirm</button>
+					</p>
+				</form>
+		</div>
+		</div>
+		<% include ./partials/footer.ejs %>
+	</body>
+</html>

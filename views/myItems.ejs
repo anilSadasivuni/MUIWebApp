@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<title>MPU</title>
+		<link rel="stylesheet" type="text/css" href="/stylesheets/CSS.css">
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<% include ./partials/header.ejs %>
+
+		<% include ./partials/user-navigation.ejs %>
+
+		<div class='line'>
+			<% include ./partials/site-navigation.ejs %>
+			<div class='lineELement main'>
+			<h2 class='watchListHeader'>Watch List: All your Watch list at one place - update,add and remove your favourite content</h2>
+				<table>
+					<thead>
+						<tr>
+							<th>Movie</th>
+							<th>Category</th>
+							<th>Rating</th>
+							<th>Watched</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+					<tbody>
+						<% for(var i=0; i< profile.userItems.length; i++) { %>
+						<tr>
+							<td><a href="/categories/item?itemCode=<%= profile.userItems[i].itemCode %>"><%= profile.userItems[i].item %></a></td>
+							<td><%= profile.userItems[i].category %></td>
+							<td><%= profile.userItems[i].rating %></td>
+							<td><%= profile.userItems[i].madeIt %></td>
+
+							<td class="columnbtn">
+								<button type='button'  onclick="location.href='/signin/feedback?itemCode=<%= profile.userItems[i].itemCode %>'">Update</button>
+								<button class="deletebtn" onclick="location.href='/signin/myitems?itemCode=<%= profile.userItems[i].itemCode %>&action=remove'">Remove</button>
+							</td>
+
+						</tr>
+						<% } %>
+					</tbody>
+				</table>
+				<p class='predLink'> click <a href="#">here</a> to make Movie Predictions</p>
+			</div>
+		</div>
+
+		<% include ./partials/footer.ejs %>
+	</body>
+</html>
